@@ -1,0 +1,440 @@
+adat-validity: false
+input-captures:
+- channel: '01'
+  source: Analog 1
+- channel: '02'
+  source: Analog 2
+- channel: '03'
+  source: Analog 3
+- channel: '04'
+  source: Analog 4
+- channel: '05'
+  source: Analog 5
+- channel: '06'
+  source: Analog 6
+- channel: '07'
+  source: Analog 7
+- channel: 08
+  source: Analog 8
+- channel: 09
+  source: SPDIF 1
+- channel: '10'
+  source: SPDIF 2
+- channel: '11'
+  source: ADAT 1
+- channel: '12'
+  source: ADAT 2
+- channel: '13'
+  source: ADAT 3
+- channel: '14'
+  source: ADAT 4
+- channel: '15'
+  source: ADAT 5
+- channel: '16'
+  source: ADAT 6
+- channel: '17'
+  source: ADAT 7
+- channel: '18'
+  source: ADAT 8
+internal-validity: true
+master-gain:
+  muted: true
+  volume: 108
+matrix:
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '01'
+  source: Analog 1
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '02'
+  source: Analog 2
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '03'
+  source: Analog 3
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '04'
+  source: Analog 4
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '05'
+  source: Analog 5
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '06'
+  source: Analog 6
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '07'
+  source: Analog 7
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: 08
+  source: Analog 8
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: 09
+  source: ADAT 8
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '10'
+  source: ADAT 8
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '11'
+  source: ADAT 8
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '12'
+  source: ADAT 8
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '13'
+  source: ADAT 8
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '14'
+  source: ADAT 8
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '15'
+  source: ADAT 8
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '16'
+  source: ADAT 8
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '17'
+  source: PCM 1
+- mixes:
+  - name: A
+    volume: 128
+  - name: B
+    volume: 128
+  - name: C
+    volume: 128
+  - name: D
+    volume: 128
+  - name: E
+    volume: 128
+  - name: F
+    volume: 128
+  - name: G
+    volume: 128
+  - name: H
+    volume: 128
+  number: '18'
+  source: PCM 2
+output-gains:
+- channel: '01'
+  left-source: Mix A
+  muted: true
+  right-source: Mix B
+  volume: 128
+- channel: '02'
+  left-source: Mix A
+  muted: true
+  right-source: Mix B
+  volume: 128
+- channel: '03'
+  left-source: Mix A
+  muted: false
+  right-source: Mix B
+  volume: 128
+- channel: '04'
+  left-source: Mix A
+  muted: false
+  right-source: Mix B
+  volume: 128
+- channel: '05'
+  left-source: Mix A
+  muted: false
+  right-source: Mix B
+  volume: 128
+- channel: '06'
+  left-source: Mix H
+  muted: false
+  right-source: Mix H
+  volume: 128
+- channel: '07'
+  left-source: Mix H
+  muted: false
+  right-source: Mix H
+  volume: 128
+- channel: 08
+  left-source: Mix H
+  muted: false
+  right-source: Mix H
+  volume: 128
+- channel: 09
+  left-source: Mix H
+  muted: false
+  right-source: Mix H
+  volume: 128
+- channel: '10'
+  left-source: Mix H
+  muted: false
+  right-source: Mix H
+  volume: 128
+sample-clock-source: Internal
+sample-sync-status: Locked
+spdif-validity: false
+usb-sync-status: Internal
