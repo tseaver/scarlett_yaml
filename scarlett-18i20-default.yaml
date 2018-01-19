@@ -39,7 +39,7 @@ input-captures:
 internal-validity: true
 master-gain:
   muted: false
-  volume: 80
+  volume: 108
 matrix:
 - mixes:
   - name: A
@@ -384,51 +384,61 @@ matrix:
   number: '18'
   source: Analog 8
 output-gains:
+# Main monitor, line 1/2
 - channel: '01'
   left-source: PCM 1
   muted: false
   right-source: PCM 2
   volume: 128
+# Rear panel, line 3/4
 - channel: '02'
   left-source: Mix A
   muted: false
   right-source: Mix B
   volume: 128
+# Rear panel, line 5/6
 - channel: '03'
   left-source: Mix C
   muted: false
   right-source: Mix D
   volume: 128
+# Left headphones, line 7/8
 - channel: '04'
-  left-source: Mix E
+  left-source: PCM 1
   muted: false
-  right-source: Mix F
+  right-source: PCM 2
   volume: 128
+# Right headphones, line 9/10
 - channel: '05'
-  left-source: Mix G
+  left-source: PCM 1
   muted: false
-  right-source: Mix H
+  right-source: PCM 2
   volume: 128
+# S/PDIF?, line 11/12
 - channel: '06'
   left-source: 'Off'
   muted: false
   right-source: 'Off'
   volume: 128
+# ADAT 1/2?, line 13/14
 - channel: '07'
-  left-source: PCM 11
+  left-source: 'Off'
   muted: false
-  right-source: PCM 12
+  right-source: 'Off'
   volume: 128
+# ADAT 3/4?, line 15/16
 - channel: 08
-  left-source: PCM 13
+  left-source: 'Off'
   muted: false
-  right-source: PCM 14
+  right-source: 'Off'
   volume: 128
+# ADAT 5/6?, line 17/18
 - channel: 09
-  left-source: PCM 15
+  left-source: 'Off'
   muted: false
-  right-source: PCM 16
+  right-source: 'Off'
   volume: 128
+# ADAT 7/8?, line 19/20
 - channel: '10'
   left-source: 'Off'
   muted: false
