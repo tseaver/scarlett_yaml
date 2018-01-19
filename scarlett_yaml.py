@@ -194,36 +194,59 @@ class Mixer(object):
             self._save_one_control(
                 gain._right_source._num_id, gain._right_source.value)
 
-    def to_yaml(self):
-        yield "internal-validity: %s" % self._internal_validity.value
-        yield "spdif-validity: %s" % self._spdif_validity.value
-        yield "adat-validity: %s" % self._adat_validity.value
-        yield "usb-sync-status: %s" % self._usb_sync.value
-        yield "sample-clock-source: %s" % self._sample_clock_source.value
-        yield "sample-sync-status: %s" % self._sample_clock_sync.value
+    def to_yaml(self, stream):
         volume, muted = self.master_gain
-        yield "master-gain:"
-        yield "    volume: %d" % volume
-        yield "    muted: %s" % muted
-        yield "matrix:"
+        document = {
+            "internal-validity": self._internal_validity.value,
+            "spdif-validity": self._spdif_validity.value,
+            "adat-validity": self._adat_validity.value,
+            "usb-sync-status": self._usb_sync.value,
+            "sample-clock-source": self._sample_clock_source.value,
+            "sample-sync-status": self._sample_clock_sync.value,
+            "master-gain": {
+                "volume": volume,
+                "muted": muted,
+            },
+        }
+        matrix = document['matrix'] = []
+
         for num, source, mixes in self.matrix_entries:
-            yield "    - number: %s" % num
-            yield "      source: %s" % source
-            yield "      mixes:"
+
+            entry = {
+                "number": num,
+                "source": source,
+                "mixes": [],
+            }
+
             for mix, volume in mixes:
-                yield "        - name: %s" % mix
-                yield "          volume: %s" % volume.value
-        yield "input-captures:"
+                entry["mixes"].append({
+                    "name": mix,
+                    "volume": volume.value,
+                })
+
+            matrix.append(entry)
+
+        captures = document["input-captures"] = []
+
         for channel, source in self.input_captures:
-            yield "    - channel: %s" % channel
-            yield "      source: %s" % source
-        yield "output-gains:"
+            captures.append({
+                "channel": channel,
+                "source": source,
+            })
+
+        gains = document["output-gains"] = []
+
         for channel, volume, muted, left, right in self.output_gains:
-            yield "    - channel: %s" % channel
-            yield "      volume: %d" % volume
-            yield "      muted: %s" % muted
-            yield "      left-source: %s" % left
-            yield "      right-source: %s" % right
+            gains.append({
+                "channel": channel,
+                "volume": volume,
+                "muted": muted,
+                "left-source": left,
+                "right-source": right,
+            })
+
+        yaml.dump(
+            document, stream, default_flow_style=False, indent=2)
 
     def from_yaml(self, stream):
         document = yaml.load(stream)
@@ -440,8 +463,7 @@ def main():
             mixer.from_yaml(file)
         mixer.save_controls()
     else:
-        for line in mixer.to_yaml():
-            print(line)
+        mixer.to_yaml(sys.stdout)
 
 if __name__ == '__main__':
     main()
