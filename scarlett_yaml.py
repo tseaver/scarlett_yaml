@@ -176,9 +176,10 @@ class Mixer(object):
             self._usb_sync,
             self._sample_clock_source,
             self._master_gain._volume,
-            self._master_gain._muted,
         ):
             self._save_one_control(control._num_id, control.value)
+        self._save_one_control(
+            control._num_id, self._master_gain._muted.value and 'off' or 'on')
         for _, entry in sorted(self._matrix_entries.items()):
             self._save_one_control(entry._source._num_id, entry._source.value)
             for _, mix in entry.mixes:
@@ -186,9 +187,14 @@ class Mixer(object):
         for _, capture in sorted(self._input_captures.items()):
             self._save_one_control(
                 capture._source._num_id, capture._source.value)
-        for _, gain in sorted(self._output_gains.items()):
-            self._save_one_control(gain._volume._num_id, gain._volume.value)
-            self._save_one_control(gain._muted._num_id, gain._muted.value)
+        for num, gain in sorted(self._output_gains.items()):
+            if gain._muted.value:
+                doubled = 'off,off'
+            else:
+                doubled = 'on,on'
+            self._save_one_control(gain._muted._num_id, doubled)
+            doubled = '%d,%d' % (gain._volume.value, gain._volume.value)
+            self._save_one_control(gain._volume._num_id, doubled)
             self._save_one_control(
                 gain._left_source._num_id, gain._left_source.value)
             self._save_one_control(
